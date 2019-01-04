@@ -3,6 +3,8 @@ enum BrightnessEvent {
     IsDark = 1,
     //% block="明るい"
     IsBrighter = 2,
+    //% block="少し暗い"
+    Isdarker = 3,
 }
 
 //% weight=70 icon="\uf0e7" color=#d2691e block="電気の利用"
@@ -23,7 +25,7 @@ namespace gp {
             return false;
         }
     }
-    //% blockId=is_dark block="少し暗い"
+    //% blockId=is_darker block="少し暗い"
     export function isDark(): boolean {
         if (input.lightLevel() < 60) {
             return true;
